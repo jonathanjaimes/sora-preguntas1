@@ -1,0 +1,105 @@
+
+<!-- <form #myForm (ngSubmit)="addQuestion()" *ngIf="amountQ != 0">
+    <input type="text" placeholder="Pregunta" name="titulo" [(ngModel)] = "titulo">
+
+    <input type="text" placeholder="Respuesta 1" name="resp1" [(ngModel)] = "resp1">
+    <input #radio1 type="radio" (click)="funcion($event)" name="resp" [value]="resp1">
+
+    <input type="text" placeholder="Respuesta 2" name="resp2" [(ngModel)] = "resp2">
+    <input type="radio" (click)="funcion($event)" name="resp" [value]="resp2">
+
+    <input type="text" placeholder="Respuesta 3" name="resp3" [(ngModel)] = "resp3">
+    <input type="radio" (click)="funcion($event)" name="resp" [value]="resp3">
+
+    <input type="text" placeholder="Respuesta 4" name="resp4" [(ngModel)] = "resp4">
+    <input type="radio" (click)="funcion($event)" name="resp" [value]="resp4">
+    <hr>
+    <select name="nivel" [(ngModel)]="nivel">
+    <option [value]="nivel" *ngFor="let nivel of niveles">{{nivel}}</option>
+    </select>
+    <button type="button" (click)="addQuestion()" >Agregar pregunta</button>
+</form>
+<hr>
+<button type="button" (click)="reset()">Resetear juego</button> -->
+
+<div class="container-fluid d-flex justify-content-center mt-5">
+  <div class="row">
+    <div class="col">
+      <form (ngSubmit)="amountQuestions()" class="form-group">
+        <div class="d-flex align-items-center flex-column">
+          <label class="mb-2" for="cantidad">Ingresa la cantidad de preguntas</label>
+          <input type="number" name="amountQ" [(ngModel)] = "amountQ" class="form-control w-25 mt-2" id="cantidad">
+
+        </div>
+      </form>
+      <form (submit)="addQuestion()" *ngIf="amountQ != 0" [formGroup]="registerForm" class="form-group">
+        
+          <div class="mt-5">
+            <label for="pregunta" class="custom-control-label mb-2">Ingresa tu pregunta</label>
+            <input type="text" placeholder="pregunta" formControlName="pregunta" id="pregunta" class="form-control">
+        
+          </div>
+        
+          <div class="mt-4">
+            <label for="resp1" class="mb-2">Primera respuesta</label>
+            <div class="d-flex justify-content-evenly align-items-center">
+              <input type="text"  placeholder="respuesta 1"  formControlName="resp1" (keyup)="obtener1($event)" id="resp1" class="form-control marginRight">
+              <input type="radio" [value]="resp1" formControlName="respCorrect" class="form-check-input">
+
+            </div>
+        
+          </div>
+        
+          <div class="mt-3">
+            <label for="resp2" class="mb-2">Segunda respuesta</label>
+
+            <div class="d-flex justify-content-evenly align-items-center">
+              <input type="text" placeholder="respuesta 2" formControlName="resp2" (keyup)="obtener2($event)" id="resp2" class="form-control marginRight">
+              <input type="radio" [value]="resp2" formControlName="respCorrect" class="form-check-input">
+
+            </div>
+        
+          </div>
+        
+          <div class="mt-3">
+            <label for="resp3" class="mb-2">Tercera respuesta</label>
+
+            <div class="d-flex justify-content-evenly align-items-center">
+              <input type="text"  placeholder="respuesta 3" formControlName="resp3" (keyup)="obtener3($event)" id="resp3" class="form-control marginRight">
+              <input type="radio" [value]="resp3" formControlName="respCorrect" class="form-check-input">
+
+            </div>
+        
+          </div>
+        
+          <div class="mt-3">
+            <label for="resp4" class="mb-2">Cuarta respuesta</label>
+
+            <div class="d-flex justify-content-evenly align-items-center">
+              <input type="text"  placeholder="respuesta 4" formControlName="resp4" (keyup)="obtener4($event)" id="resp4" class="form-control marginRight">
+              <input type="radio" [value]="resp4" formControlName="respCorrect" class="form-check-input" >
+
+            </div>
+        
+          </div>
+        
+          <label for="lista" class="mt-3">Indica el nivel al que pertenece la pregunta</label>
+          <select formControlName="nivel" class="form-select mt-2" id="lista">
+            <option value="nivel1">nivel1</option>
+            <option value="nivel2">nivel2</option>
+            <option value="nivel3">nivel3</option>
+            <option value="nivel4">nivel4</option>
+            <option value="nivel5">nivel5</option>
+          </select>
+        
+          <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        </form>
+
+    </div>
+  </div>
+</div>
+
+<div class="d-flex align-items-center justify-content-center my-5">
+  <button type="button" class="btn btn-danger" (click)="reset()">Resetear juego</button>
+
+</div>

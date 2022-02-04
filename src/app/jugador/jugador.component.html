@@ -1,0 +1,144 @@
+
+
+<div *ngIf="puntos == 0 && llenoNivel1">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex align-items-center flex-column mt-5">
+                    <h2 class="mb-4">{{escogidaNivel1.pregunta}}</h2>
+                    <div class="ancho">
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel1.resp1}}" (click)="responder($event, escogidaNivel1.respCorrect)">{{escogidaNivel1.resp1}}</button>
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel1.resp2}}" (click)="responder($event, escogidaNivel1.respCorrect)">{{escogidaNivel1.resp2}}</button>
+    
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel1.resp3}}" (click)="responder($event, escogidaNivel1.respCorrect)">{{escogidaNivel1.resp3}}</button>
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel1.resp4}}" (click)="responder($event, escogidaNivel1.respCorrect)">{{escogidaNivel1.resp4}}</button>
+    
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="puntos == 5 && llenoNivel2">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex align-items-center flex-column mt-5">
+                        <h2 class="mb-4">{{escogidaNivel2.pregunta}}</h2>
+                        <div class="ancho">
+                            <div class="d-flex justify-content-center flex-wrap">
+                                <button class="boton btn btn-primary" type="button" value="{{escogidaNivel2.resp1}}" (click)="responder($event, escogidaNivel2.respCorrect)">{{escogidaNivel2.resp1}}</button>
+                                <button class="boton btn btn-primary" type="button" value="{{escogidaNivel2.resp2}}" (click)="responder($event, escogidaNivel2.respCorrect)">{{escogidaNivel2.resp2}}</button>
+        
+                            </div>
+                            <div class="d-flex justify-content-center flex-wrap">
+                                <button class="boton btn btn-primary" type="button" value="{{escogidaNivel2.resp3}}" (click)="responder($event, escogidaNivel2.respCorrect)">{{escogidaNivel2.resp3}}</button>
+                                <button class="boton btn btn-primary" type="button" value="{{escogidaNivel2.resp4}}" (click)="responder($event, escogidaNivel2.respCorrect)">{{escogidaNivel2.resp4}}</button>
+        
+                            </div>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>     
+</div>
+
+<div *ngIf="puntos == 10 && llenoNivel3">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex align-items-center flex-column mt-5">
+                    <h2 class="mb-4">{{escogidaNivel3.pregunta}}</h2>
+                    <div class="ancho">
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel3.resp1}}" (click)="responder($event, escogidaNivel3.respCorrect)">{{escogidaNivel3.resp1}}</button>
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel3.resp2}}" (click)="responder($event, escogidaNivel3.respCorrect)">{{escogidaNivel3.resp2}}</button>
+    
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel3.resp3}}" (click)="responder($event, escogidaNivel3.respCorrect)">{{escogidaNivel3.resp3}}</button>
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel3.resp4}}" (click)="responder($event, escogidaNivel3.respCorrect)">{{escogidaNivel3.resp4}}</button>
+    
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="puntos == 15 && llenoNivel4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex align-items-center flex-column mt-5">
+                    <h2 class="mb-4">{{escogidaNivel4.pregunta}}</h2>
+                    <div class="ancho">
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel4.resp1}}" (click)="responder($event, escogidaNivel4.respCorrect)">{{escogidaNivel4.resp1}}</button>
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel4.resp2}}" (click)="responder($event, escogidaNivel4.respCorrect)">{{escogidaNivel4.resp2}}</button>
+    
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel4.resp3}}" (click)="responder($event, escogidaNivel4.respCorrect)">{{escogidaNivel4.resp3}}</button>
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel4.resp4}}" (click)="responder($event, escogidaNivel4.respCorrect)">{{escogidaNivel4.resp4}}</button>
+    
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="puntos == 20 && llenoNivel5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex align-items-center flex-column mt-5">
+                    <h2 class="mb-4">{{escogidaNivel5.pregunta}}</h2>
+                    <div class="ancho">
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel5.resp1}}" (click)="responder($event, escogidaNivel5.respCorrect)">{{escogidaNivel5.resp1}}</button>
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel5.resp2}}" (click)="responder($event, escogidaNivel5.respCorrect)">{{escogidaNivel5.resp2}}</button>
+    
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel5.resp3}}" (click)="responder($event, escogidaNivel5.respCorrect)">{{escogidaNivel5.resp3}}</button>
+                            <button class="boton btn btn-primary" type="button" value="{{escogidaNivel5.resp4}}" (click)="responder($event, escogidaNivel5.respCorrect)">{{escogidaNivel5.resp4}}</button>
+    
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 ">
+    <div class="row">
+        <div class="col">
+            <div class="d-flex align-items-center flex-column">
+                <p>Puntaje</p>
+                <h2>{{puntos}}</h2>
+
+            </div>
+        </div>
+    </div>
+</div>
